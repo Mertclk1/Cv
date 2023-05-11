@@ -1,0 +1,33 @@
+﻿@model Cv.Entity.Classes.Skill
+
+@{
+	ViewData["Title"] = "AddSkill";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateSkill", "Skill", FormMethod.Post))
+{
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Yetenek Düzenleme Sayfası</h4>
+
+
+				<div class="form-group">
+					<label for="exampleInputName1"> Yetenek Başlığı </label>
+					@Html.TextBoxFor(x=>x.Title, new {@class = "form-control"})
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail3"> Öğrenim Oranı </label>
+					@Html.TextBoxFor(x=>x.Value, new {@class = "form-control"})
+				</div>
+
+
+				<button class="btn btn-inverse-success mr-2">Kaydet</button>
+				<a href="/Skill/Index" class="btn btn-inverse-warning">Geri Dön</a>
+
+			</div>
+		</div>
+	</div>
+}
+

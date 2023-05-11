@@ -1,0 +1,58 @@
+﻿@using Cv.Entity.Classes
+@model List<Portfolio>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">Projelerim</h4>
+
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th> Platform </th>
+							<th> Tamamlanma Oranı </th>
+							<th> Ücret </th>
+							<th> Durum </th>
+							<th> Sil </th>
+							<th> Düzenle </th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td class="py-1">
+									<img src="@item.Platform" alt="image" />
+									@item.Name
+								</td>
+								<td>
+									<div class="progress">
+										<div class="progress-bar bg-info" role="progressbar" style="width: @item.Value%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</td>
+								<td> @item.Price </td>
+								<td> Tamamlandı </td>
+								<td>
+									<a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-inverse-danger">Sil</a>
+								</td>
+								<td>
+									<a href="/Portfolio/EditPortfolio/@item.PortfolioID" class="btn btn-inverse-success">Düzenle</a>
+								</td>
+							</tr>
+						}
+
+					</tbody>
+				</table>
+			</div>
+			<a href="/Portfolio/AddPortfolio" class="btn btn-inverse-primary"> Yeni Proje Ekle </a>
+		</div>
+	</div>
+</div>
+
+

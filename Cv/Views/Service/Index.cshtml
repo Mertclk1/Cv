@@ -1,0 +1,45 @@
+﻿@using Cv.Entity.Classes
+@model List<Service>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">Hizmetler Listesi Sayfası</h4>
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Başlık</th>
+							<th>Sil</th>
+							<th>Düzenle</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<th>
+									@item.ServiceID
+								</th>
+								<td>
+									@item.Title
+								</td>
+								<td> <a href="/Service/DeleteService/@item.ServiceID" class="btn btn-inverse-danger">Sil</a> </td>
+								<td> <a href="/Service/EditService/@item.ServiceID" class="btn btn-inverse-success">Düzenle</a> </td>
+							</tr>
+						}
+					</tbody>
+				</table>
+				<a href="/Service/AddService" class="btn btn-inverse-info"> Yeni Hizmet Ekle </a>
+			</div>
+		</div>
+	</div>
+</div>
+

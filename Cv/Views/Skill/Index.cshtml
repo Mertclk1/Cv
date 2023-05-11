@@ -1,0 +1,51 @@
+﻿@using Cv.Entity.Classes
+@model List<Skill>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">Yetenek Listesi Tablosu</h4>
+
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Başlık</th>
+							<th>Oran</th>
+							<th>Sil</th>
+							<th>Düzenle</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									@item.Title									
+								</td>
+								<td>
+									<div class="progress">
+										<div class="progress-bar bg-info" role="progressbar" style="width: @item.Value%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</td>																
+								<td>
+									<a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-inverse-danger">Sil</a>
+								</td>
+								<td>
+									<a href="/Skill/UpdateSkill/@item.SkillID" class="btn btn-inverse-success">Düzenle</a>
+								</td>
+							</tr>
+						}
+
+					</tbody>
+				</table>
+			</div>
+			<a href="/Skill/AddSkill" class="btn btn-inverse-primary"> Yeni Yetenek Ekle </a>
+		</div>
+	</div>
+</div>
