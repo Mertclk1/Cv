@@ -11,18 +11,13 @@ namespace Cv.UI.Controllers
 		public IActionResult Index()
 		{
 
-			ViewBag.v1 = "Yetenek Listesi";
-			ViewBag.v2 = "Yetenekler";
-			ViewBag.v3 = "Yetenekler Listesi";
+			
 			var values = skillManager.TGetList();
 			return View(values);
 		}
 		[HttpGet]
 		public IActionResult AddSkill()
 		{
-			ViewBag.v1 = "Yetenek Ekleme";
-			ViewBag.v2 = "Yetenekler";
-			ViewBag.v3 = "Yetenekler Ekleme";
 			return View();
 		}
 		[HttpPost]
@@ -42,9 +37,7 @@ namespace Cv.UI.Controllers
 		[HttpGet]
 		public IActionResult UpdateSkill(int id)
 		{
-			ViewBag.v1 = "Yetenek Düzenle";
-			ViewBag.v2 = "Yetenekler";
-			ViewBag.v3 = "Yetenekler Düzenle";
+			
 			var values = skillManager.TGetByID(id);
 			return View(values);
 		}

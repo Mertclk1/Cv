@@ -9,19 +9,14 @@ namespace Cv.UI.Controllers
 	{
 		ExperienceManager experienceManager = new ExperienceManager(new EfExparienceDal());
 		public IActionResult Index()
-		{
-			ViewBag.v1 = "Diploma ve Sertifika Listesi";
-			ViewBag.v2 = "Diploma ve Sertifika";
-			ViewBag.v3 = "Diploma ve Sertifika Listesi";
+		{			
 			var values = experienceManager.TGetList();
 			return View(values);
 		}
 		[HttpGet]
 		public IActionResult AddExperience()
 		{
-			ViewBag.v1 = "Diploma ve Sertifika Ekleme";
-			ViewBag.v2 = "Diploma ve Sertifika";
-			ViewBag.v3 = "Diploma ve Sertifika Ekleme";
+			
 			return View();
 		}
 		[HttpPost]
@@ -39,9 +34,7 @@ namespace Cv.UI.Controllers
 		[HttpGet]
 		public IActionResult EditExperience(int id)
 		{
-			ViewBag.v1 = "Diploma ve Sertifika Düzenle";
-			ViewBag.v2 = "Diploma ve Sertifika";
-			ViewBag.v3 = "Diploma ve Sertifika Düzenle";
+			
 			var values = experienceManager.TGetByID(id);
 			return View(values);
 		}
