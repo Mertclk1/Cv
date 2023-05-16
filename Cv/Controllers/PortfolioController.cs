@@ -14,18 +14,14 @@ namespace Cv.UI.Controllers
 		public IActionResult Index()
 		{
 
-			ViewBag.v1 = "Projeler Listesi";
-			ViewBag.v2 = "Projeler";
-			ViewBag.v3 = "projeler Listesi";
+			
 			var values = portfolioManager.TGetList();
 			return View(values);
 		}
 		[HttpGet]
 		public IActionResult AddPortfolio()
 		{
-			ViewBag.v1 = "Projeler Ekleme";
-			ViewBag.v2 = "Projeler";
-			ViewBag.v3 = "Projeler Ekleme";
+			
 			return View();
 		}
 		[HttpPost]
@@ -58,9 +54,7 @@ namespace Cv.UI.Controllers
 		[HttpGet]
 		public IActionResult EditPortfolio(int id)
 		{
-			ViewBag.v1 = "Projeler Düzenle";
-			ViewBag.v2 = "Projeler";
-			ViewBag.v3 = "Projeler Düzenle";
+			
 			var values = portfolioManager.TGetByID(id);
 			return View(values);
 		}
