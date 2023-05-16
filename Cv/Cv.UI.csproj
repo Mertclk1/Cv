@@ -18133,6 +18133,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Writer\Data\" />
+    <Folder Include="wwwroot\Userimage\" />
+    <Folder Include="wwwroot\skydash\.git\objects\info\" />
+    <Folder Include="wwwroot\skydash\.git\objects\pack\" />
+    <Folder Include="wwwroot\skydash\.git\refs\tags\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <TypeScriptCompile Include="wwwroot\corona-free-dark-bootstrap-admin-template-1.0.0\template\node_modules\%40gulp-sourcemaps\identity-map\node_modules\source-map\source-map.d.ts" />
     <TypeScriptCompile Include="wwwroot\corona-free-dark-bootstrap-admin-template-1.0.0\template\node_modules\%40nodelib\fs.scandir\out\adapters\fs.d.ts" />
     <TypeScriptCompile Include="wwwroot\corona-free-dark-bootstrap-admin-template-1.0.0\template\node_modules\%40nodelib\fs.scandir\out\constants.d.ts" />
@@ -19564,14 +19572,6 @@
     <TypeScriptCompile Include="wwwroot\corona-free-dark-bootstrap-admin-template-1.0.0\template\node_modules\yargs\node_modules\path-exists\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\corona-free-dark-bootstrap-admin-template-1.0.0\template\node_modules\yargs\node_modules\string-width\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\corona-free-dark-bootstrap-admin-template-1.0.0\template\node_modules\yargs\node_modules\strip-ansi\index.d.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Writer\Data\" />
-    <Folder Include="wwwroot\Userimage\" />
-    <Folder Include="wwwroot\skydash\.git\objects\info\" />
-    <Folder Include="wwwroot\skydash\.git\objects\pack\" />
-    <Folder Include="wwwroot\skydash\.git\refs\tags\" />
   </ItemGroup>
 
 </Project>
