@@ -11,9 +11,7 @@ namespace Cv.UI.Controllers
 		[HttpGet]
 		public IActionResult Index()
 		{
-			ViewBag.v1 = "Düzenleme";
-			ViewBag.v2 = "Hizmetlerim";
-			ViewBag.v3 = "Hizmetlerim Sayfası";
+			
 			var values = serviceManager.TGetList();
 			return View(values);
 		}
@@ -21,9 +19,7 @@ namespace Cv.UI.Controllers
 		[HttpGet]
 		public IActionResult AddService()
 		{
-			ViewBag.v1 = "Hizmet Ekleme";
-			ViewBag.v2 = "Hizmetlerim";
-			ViewBag.v3 = "Hizmet Ekleme";
+			
 			return View();
 		}
 		[HttpPost]
@@ -43,9 +39,6 @@ namespace Cv.UI.Controllers
 		[HttpGet]
 		public IActionResult EditService(int id)
 		{
-			ViewBag.v1 = "Hizmet Düzenle";
-			ViewBag.v2 = "Hizmetler";
-			ViewBag.v3 = "Hizmet Düzenle";
 			var values = serviceManager.TGetByID(id);
 			return View(values);
 		}

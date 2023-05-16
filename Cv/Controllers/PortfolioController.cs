@@ -9,6 +9,7 @@ namespace Cv.UI.Controllers
 {
 	public class PortfolioController : Controller
 	{
+		// resim çekme yapacaksın unutma!!
 
 		PortfolioManager portfolioManager = new PortfolioManager(new EfPortfolioDal());
 		public IActionResult Index()
