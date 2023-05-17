@@ -24,7 +24,7 @@ namespace Cv.DataAccess.Concrete
         public DbSet<Service> Services { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
-       
+        public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<ToDoList> ToDoList { get; set; }
         public DbSet<test1> Test1s { get; set; }
         public DbSet<Announcement> Announcements  { get; set; }
