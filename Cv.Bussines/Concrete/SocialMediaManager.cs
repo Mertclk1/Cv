@@ -43,7 +43,12 @@ namespace Cv.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public void TUpdate(SocialMedia t)
+		public List<SocialMedia> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void TUpdate(SocialMedia t)
         {
             _socialMediaDal.Update(t);
         }

@@ -43,6 +43,11 @@ namespace Cv.Business.Concrete
 			throw new NotImplementedException();
 		}
 
+		public List<ToDoList> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
+
 		public void TUpdate(ToDoList t)
 		{
 			_toDoListDal.Update(t);

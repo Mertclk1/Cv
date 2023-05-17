@@ -53,6 +53,11 @@ namespace Cv.Business.Concrete
 			throw new NotImplementedException();
 		}
 
+		public List<WriterMessage> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
+
 		public void TUpdate(WriterMessage t)
         {
             _writerMessage.Update(t);

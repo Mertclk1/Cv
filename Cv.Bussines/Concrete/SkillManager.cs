@@ -43,7 +43,12 @@ namespace Cv.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public void TUpdate(Skill t)
+		public List<Skill> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void TUpdate(Skill t)
         {
             _skillDal.Update(t);
         }

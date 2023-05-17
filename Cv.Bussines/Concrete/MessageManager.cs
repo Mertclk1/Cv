@@ -38,7 +38,7 @@ namespace Cv.Business.Concrete
             return _messageDal.GetList();
         }
 
-        public List<Message> TGetListbyFilter()
+        public List<Message> TGetListbyFilter(string p)
         {
             throw new NotImplementedException();
         }

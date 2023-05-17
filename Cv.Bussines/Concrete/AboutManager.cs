@@ -36,14 +36,14 @@ namespace Cv.Business.Concrete
         public List<About> TGetList()
         {
             return _aboutDal.GetList();
-        }
+        }       
 
-        public List<About> TGetListbyFilter()
-        {
-            throw new NotImplementedException();
-        }
+		public List<About> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
 
-        public void TUpdate(About t)
+		public void TUpdate(About t)
         {
             _aboutDal.Update(t);
         }

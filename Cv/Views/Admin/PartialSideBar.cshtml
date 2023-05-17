@@ -110,13 +110,22 @@
 		</a>
 	</li>
 	<li class="nav-item menu-items">
-		<a class="nav-link" href="~">
+		<a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
 			<span class="menu-icon">
 				<i class="mdi mdi-message"></i>
 			</span>
 			<span class="menu-title">Mesajlar</span>
+			<i class="menu-arrow"></i>
 		</a>
-	</li>
+		<div class="collapse" id="auth">
+			<ul class="nav flex-column sub-menu">
+				<li class="nav-item"> <a class="nav-link" href="#"> Yeni Mesaj </a></li>
+				<li class="nav-item"> <a class="nav-link" href="~/AdminMessage/ReceiverMessageList/"> Gelen kutusu </a></li>
+				<li class="nav-item"> <a class="nav-link" href="~/AdminMessage/SenderMessageList/"> Giden Kutusu </a></li>
+				
+			</ul>
+		</div>
+	</li>	
 	<li class="nav-item menu-items">
 		<a class="nav-link" href="/Contact/Index/">
 			<span class="menu-icon">

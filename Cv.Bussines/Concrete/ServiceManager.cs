@@ -43,7 +43,12 @@ namespace Cv.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public void TUpdate(Service t)
+		public List<Service> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void TUpdate(Service t)
         {
             _serviceDal.Update(t);
         }

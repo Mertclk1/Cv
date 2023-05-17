@@ -43,7 +43,12 @@ namespace Cv.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public void TUpdate(Experience t)
+		public List<Experience> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void TUpdate(Experience t)
         {
             _experienceDal.Update(t);
         }

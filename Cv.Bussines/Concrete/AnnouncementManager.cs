@@ -44,6 +44,11 @@ namespace Cv.Business.Concrete
 			throw new NotImplementedException();
 		}
 
+		public List<Announcement> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
+
 		public void TUpdate(Announcement t)
 		{
 			_announcementDal.Update(t);

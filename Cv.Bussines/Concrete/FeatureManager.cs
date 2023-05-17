@@ -43,7 +43,12 @@ namespace Cv.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public void TUpdate(Feature t)
+		public List<Feature> TGetListbyFilter(string p)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void TUpdate(Feature t)
         {
             _featureDal.Update(t);
         }

@@ -13,6 +13,6 @@ namespace Cv.Business.Abstract
         void TUpdate(T t);
         List<T> TGetList();
         T TGetByID(int id);
-        List<T> TGetListbyFilter();
+        List<T> TGetListbyFilter(string p);
     }
 }
