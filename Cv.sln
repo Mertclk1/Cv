@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cv.UI", "Cv\Cv.UI.csproj", "{650F81A9-E43B-4978-9808-7D4167B2E21F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cv.UI", "Cv\Cv.UI.csproj", "{650F81A9-E43B-4978-9808-7D4167B2E21F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cv.Entity", "Cv.Entity\Cv.Entity.csproj", "{0EF2543E-D6CB-4A33-B33F-2DB662AAC448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cv.Entity", "Cv.Entity\Cv.Entity.csproj", "{0EF2543E-D6CB-4A33-B33F-2DB662AAC448}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cv.DataAccess", "Cv.DataAccess\Cv.DataAccess.csproj", "{D001CCE8-35E9-46EC-8CD1-A7CE9F791040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cv.DataAccess", "Cv.DataAccess\Cv.DataAccess.csproj", "{D001CCE8-35E9-46EC-8CD1-A7CE9F791040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cv.Business", "Cv.Bussines\Cv.Business.csproj", "{0DEC28B0-D9C0-4B02-AF41-B2F20D93970C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cv.Business", "Cv.Bussines\Cv.Business.csproj", "{0DEC28B0-D9C0-4B02-AF41-B2F20D93970C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
