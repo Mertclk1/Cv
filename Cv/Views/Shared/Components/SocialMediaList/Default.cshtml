@@ -1,0 +1,17 @@
+﻿@using Cv.Entity.Classes
+@model List<SocialMedia>
+
+<div class="social-nav" data-aos="fade-up" data-aos-delay="200">
+	<nav role="navigation">
+		<ul class="nav justify-contetn-left">
+			@foreach (var item in Model)
+			{
+				<li class="nav justify-content-left">
+					<li class="nav-item"><a class="nav-link" href="@item.Url" title="@item.Name"><i class="@item.Icon"></i><span class="menu-title sr-only">@item.Name</span></a></li>
+				</li>
+			}
+		</ul>
+		
+		
+	</nav>
+</div>

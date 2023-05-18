@@ -30,7 +30,7 @@ namespace Cv.Business.Concrete
 
         public Contact TGetByID(int id)
         {
-            throw new NotImplementedException();
+           return _contactDal.GetById(id);
         }
 
         public List<Contact> TGetList()

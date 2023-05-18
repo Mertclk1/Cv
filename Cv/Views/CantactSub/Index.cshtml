@@ -1,0 +1,47 @@
+﻿@model Cv.Entity.Classes.Contact
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "CantactSub", FormMethod.Post))
+{
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Alt İletişim Bilgileri Düzenleme Paneli</h4>
+
+				<div class="form-group">
+					<label for="exampleInputName1"> ID </label>
+					@Html.TextBoxFor(x=>x.ContactID, new {@class = "form-control"})
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail3"> Başlık </label>
+					@Html.TextBoxFor(x=>x.Title, new {@class = "form-control"})
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail3"> Telefon </label>
+					@Html.TextBoxFor(x=>x.Phone, new {@class = "form-control"})
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail3"> Mail </label>
+					@Html.TextBoxFor(x=>x.Mail, new {@class = "form-control"})
+				</div>			
+				<div class="form-group">
+					<label for="exampleInputPassword4">Açıklama</label>
+					@Html.TextAreaFor(x=>x.Description,10,3, new {@class = "form-control"})
+				</div>
+				<button class="btn btn-primary mr-2">Kaydet</button>
+				<a href="/Dashboard/Index" class="btn btn-dark">Geri Dön</a>
+
+			</div>
+		</div>
+	</div>
+}
