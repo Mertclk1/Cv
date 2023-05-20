@@ -6,7 +6,7 @@ namespace Cv.UI.ViewComponents.Experience
 {
     public class ExperienceList : ViewComponent
     {
-        ExperienceManager experienceManager = new ExperienceManager(new EfExparienceDal());
+        ExperienceManager experienceManager = new ExperienceManager(new EfExperienceDal());
 
         public IViewComponentResult Invoke()
         {

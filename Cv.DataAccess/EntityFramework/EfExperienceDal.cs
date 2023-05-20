@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Cv.DataAccess.EntityFramework
 {
-    public class EfExparienceDal : GenericRepository<Experience>, IExperienceDal
-    {
-    }
+	public class EfExperienceDal : GenericRepository<Experience>, IExperienceDal
+	{
+	}
 }

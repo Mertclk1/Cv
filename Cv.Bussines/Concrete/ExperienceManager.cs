@@ -18,30 +18,25 @@ namespace Cv.Business.Concrete
             _experienceDal = experienceDal;
         }
 
-        public void TAdd(Experience t)
-        {
-            _experienceDal.Insert(t);
-        }
+		public void TAdd(Experience t)
+		{
+			_experienceDal.Insert(t);
+		}
 
-        public void TDelete(Experience t)
-        {
-            _experienceDal.Delete(t);
-        }
+		public void TDelete(Experience t)
+		{
+			_experienceDal.Delete(t);
+		}
 
-        public Experience TGetByID(int id)
-        {
-            return _experienceDal.GetById(id);
-        }
+		public Experience TGetByID(int id)
+		{
+			return _experienceDal.GetById(id);
+		}
 
-        public List<Experience> TGetList()
-        {
-            return _experienceDal.GetList();
-        }
-
-        public List<Experience> TGetListbyFilter()
-        {
-            throw new NotImplementedException();
-        }
+		public List<Experience> TGetList()
+		{
+			return _experienceDal.GetList();
+		}
 
 		public List<Experience> TGetListbyFilter(string p)
 		{
@@ -49,8 +44,8 @@ namespace Cv.Business.Concrete
 		}
 
 		public void TUpdate(Experience t)
-        {
-            _experienceDal.Update(t);
-        }
-    }
+		{
+			_experienceDal.Update(t);
+		}
+	}
 }

@@ -9,7 +9,7 @@ namespace Cv.UI.Controllers
 	[Authorize(Roles = "Admin")]
 	public class ExperienceController : Controller
 	{
-		ExperienceManager experienceManager = new ExperienceManager(new EfExparienceDal());
+		ExperienceManager experienceManager = new ExperienceManager(new EfExperienceDal());
 		public IActionResult Index()
 		{			
 			var values = experienceManager.TGetList();

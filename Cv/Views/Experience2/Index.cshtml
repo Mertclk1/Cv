@@ -1,0 +1,68 @@
+﻿@using Cv.Entity.Classes
+@model List<Experience>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="col-md-6">
+	<div class="p-2">
+		<button type="button" id="btngetlistall" class="btn btn-outline-info">Verileri Getir</button>
+		<button type="button" id="btnadd" class="btn btn-outline-primary">Kaydet</button>
+	</div>
+</div>
+
+<div class="p-2" id="listexperience"></div>
+
+<br />
+
+<div class="col-md-12">
+	<input type="text" class="form-control" id="inpname" placeholder="Başlık" />
+	<br />
+	<input type="text" class="form-control" id="inpdate" placeholder="Tarih" />
+</div>
+
+@section Scripts {
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script>
+		$("#btngetlistall").click(function () {
+			$.ajax({
+				contentType: "application/json",
+				dataType: "json",
+				type: "GET",
+				url: "/Experience2/ExperianceList",
+				success: function (data) {
+					let values = JSON.parse(data);
+					console.log(values);
+
+					let htmlst = "<table class='table table-bordered'><tr><th>ID</th><th>Başlık</th><th>Tarih</th></tr>";
+					$.each(values, function (index, value) {
+						htmlst += "<tr><td>" + value.ExprerienceID + "</td><td>" + value.Name + "</td><td>" + value.Date + "</td></tr>";
+					});
+					htmlst += "</table>";
+					$("#listexperience").html(htmlst);
+				}
+			});
+		});
+
+
+		$("#btnadd").click(function () {
+			let values = {
+				Name: $("#inpname").val(),
+				Date: $("#inpdate").val()
+			};
+
+			$.ajax({
+				type: "Post",
+				url: "/Experience2/AddExperience/",
+				data: values,
+				success: function (funk1) {
+					let result = jQuery.parseJSON(funk1);
+					alert("Başarılı bir şekilde eklendi");
+				}
+			});
+		});
+	</script>
+}
+
+
