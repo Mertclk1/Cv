@@ -1,12 +1,14 @@
 ﻿using Cv.Business.Concrete;
 using Cv.Entity.Classes;
 using Cv.UI.Areas.Writer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
 
 namespace Cv.UI.Areas.Writer.Controllers
 {
+	[AllowAnonymous]
 	[Area("Writer")]
     [Route("Writer/[controller]/[action]")]
     public class RegisterController : Controller

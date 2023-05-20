@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Cv.UI.Controllers
 {
-	public class DashboardController : Controller
+    [Authorize(Roles = "Admin")]
+    public class DashboardController : Controller
 	{
 		public IActionResult Index()
 		{

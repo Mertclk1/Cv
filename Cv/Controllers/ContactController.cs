@@ -1,10 +1,13 @@
 ﻿using Cv.Business.Concrete;
 using Cv.DataAccess.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Cv.UI.Controllers
 {
-	public class ContactController : Controller
+    [Authorize(Roles = "Admin")]
+    public class ContactController : Controller
 	{
 		MessageManager messageManager = new MessageManager(new EfMessageDal());
 

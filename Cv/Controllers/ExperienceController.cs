@@ -1,10 +1,12 @@
 ﻿using Cv.Business.Concrete;
 using Cv.DataAccess.EntityFramework;
 using Cv.Entity.Classes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cv.UI.Controllers
 {
+	[Authorize(Roles = "Admin")]
 	public class ExperienceController : Controller
 	{
 		ExperienceManager experienceManager = new ExperienceManager(new EfExparienceDal());

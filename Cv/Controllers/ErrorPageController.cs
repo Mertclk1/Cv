@@ -2,7 +2,7 @@
 
 namespace Cv.UI.Controllers
 {
-	public class AdminLoginController : Controller
+	public class ErrorPageController : Controller
 	{
 		public IActionResult Index()
 		{

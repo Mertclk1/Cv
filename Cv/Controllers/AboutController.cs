@@ -1,11 +1,14 @@
 ﻿using Cv.Business.Concrete;
 using Cv.DataAccess.EntityFramework;
 using Cv.Entity.Classes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Cv.UI.Controllers
 {
-	public class AboutController : Controller
+    [Authorize(Roles = "Admin")]
+    public class AboutController : Controller
 	{
 		AboutManager aboutManager = new AboutManager(new EfAboutDal());
 		[HttpGet]

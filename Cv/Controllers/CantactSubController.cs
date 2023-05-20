@@ -1,11 +1,14 @@
 ﻿using Cv.Business.Concrete;
 using Cv.DataAccess.EntityFramework;
 using Cv.Entity.Classes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Cv.UI.Controllers
 {
-	public class CantactSubController : Controller
+    [Authorize(Roles = "Admin")]
+    public class CantactSubController : Controller
 	{
 		ContactManager contactManager = new ContactManager(new EfContactDal());
 		[HttpGet]

@@ -3,11 +3,14 @@ using Cv.Business.ValidationRules;
 using Cv.DataAccess.EntityFramework;
 using Cv.Entity.Classes;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Cv.UI.Controllers
 {
-	public class PortfolioController : Controller
+    [Authorize(Roles = "Admin")]
+    public class PortfolioController : Controller
 	{
 		// resim çekme yapacaksın unutma!!
 

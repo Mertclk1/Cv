@@ -1,13 +1,17 @@
 ﻿using Cv.Business.Concrete;
 using Cv.DataAccess.EntityFramework;
 using Cv.Entity.Classes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Cv.UI.Controllers
 {
-	public class SkillController : Controller
+    [Authorize(Roles = "Admin")]
+    public class SkillController : Controller
 	{
-		SkillManager skillManager = new SkillManager(new EfSkillDal());
+        
+        SkillManager skillManager = new SkillManager(new EfSkillDal());
 		public IActionResult Index()
 		{
 
