@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cv.UI.Controllers
 {
-	
-	public class ExperienceController : Controller
+    [Authorize(Roles = "Admin")]
+    public class ExperienceController : Controller
 	{
 		ExperienceManager experienceManager = new ExperienceManager(new EfExperienceDal());
 		public IActionResult Index()
