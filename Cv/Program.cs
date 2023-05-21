@@ -1,3 +1,5 @@
+using Cv.Business.Abstract;
+using Cv.Business.Concrete;
 using Cv.DataAccess.Concrete;
 using Cv.Entity.Classes;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -12,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<WriterUser, WriterRole>().AddEntityFrameworkStores<Context>();
 builder.Services.AddControllersWithViews();
+
 
 builder.Services.AddMvc(config =>
 		 {

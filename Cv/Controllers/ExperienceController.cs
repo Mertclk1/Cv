@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cv.UI.Controllers
 {
-	[Authorize(Roles = "Admin")]
+	
 	public class ExperienceController : Controller
 	{
 		ExperienceManager experienceManager = new ExperienceManager(new EfExperienceDal());
