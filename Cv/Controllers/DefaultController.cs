@@ -1,10 +1,12 @@
 ﻿using Cv.Business.Concrete;
 using Cv.DataAccess.EntityFramework;
 using Cv.Entity.Classes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cv.UI.Controllers
 {
+	[AllowAnonymous]
 	public class DefaultController : Controller
 	{
 		public IActionResult Index()

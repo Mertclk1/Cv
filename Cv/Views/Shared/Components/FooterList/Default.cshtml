@@ -1,0 +1,17 @@
+﻿
+@using Cv.Entity.Classes
+@model List<SocialMedia>
+<div class="my-3">
+	<div class="h4">Hasan Mert Çelik</div>
+	<p>Bilgisayar Programcısı - Full Stack .Net Developer</p>
+	<div class="nav justify-content-center">
+		@foreach(var item in Model)
+		{
+			<nav >
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a class="nav-link" href="@item.Url" title="@item.Name"><i class="@item.Icon"></i><span class="menu-title sr-only">@item.Name</span></a></li>
+				</ul>
+			</nav>
+		}		
+	</div>
+</div>

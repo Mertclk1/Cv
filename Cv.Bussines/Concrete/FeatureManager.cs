@@ -20,37 +20,32 @@ namespace Cv.Business.Concrete
 
         public void TAdd(Feature t)
         {
-            _featureDal.Insert(t);
+            throw new NotImplementedException();
         }
 
         public void TDelete(Feature t)
         {
-            _featureDal.Delete(t);
+            throw new NotImplementedException();
         }
 
         public Feature TGetByID(int id)
         {
-            return _featureDal.GetById(id);
+            throw new NotImplementedException();
         }
 
         public List<Feature> TGetList()
         {
-            return _featureDal.GetList();
+           return _featureDal.GetList();
         }
 
-        public List<Feature> TGetListbyFilter()
+        public List<Feature> TGetListbyFilter(string p)
         {
             throw new NotImplementedException();
         }
 
-		public List<Feature> TGetListbyFilter(string p)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void TUpdate(Feature t)
+        public void TUpdate(Feature t)
         {
-            _featureDal.Update(t);
+           _featureDal.Update(t);
         }
     }
 }
