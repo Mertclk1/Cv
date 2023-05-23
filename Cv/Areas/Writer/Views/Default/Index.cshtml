@@ -37,11 +37,11 @@
 							{
 								color = "badge badge-warning";
 							}
-							if (item.Status == "Test")
+							if (item.Status == "Yeni Proje")
 							{
 								color = "badge badge-info";
 							}
-							if (item.Status == "test")
+							if (item.Status == "Yeni")
 							{
 								color = "badge badge-success";
 							}
@@ -50,7 +50,7 @@
 								<td>@item.Title</td>
 								<td>@(((DateTime) item.Date).ToString("dd-MM-yyyy"))</td>
 								<td><label class="@color">@item.Status</label></td>
-								<td> <a href="/Writer/Default/AnnouncementDetails/@item.Id" class=" btn btn-inverse-primary"> Detaylar </a>  </td>
+								<td><a href="/Writer/Views/Default/AnnouncementDetails/@item.Id" class="btn btn-outline-primary">Detaylar</a></td>
 							</tr>
 							
 						}						
