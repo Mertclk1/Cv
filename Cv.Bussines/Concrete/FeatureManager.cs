@@ -30,7 +30,7 @@ namespace Cv.Business.Concrete
 
         public Feature TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _featureDal.GetById(id);
         }
 
         public List<Feature> TGetList()
