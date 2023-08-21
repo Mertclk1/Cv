@@ -1,1 +1,1 @@
-Bu projede, kendi şahsıma ait bir cv sitesi tasarlanmıştır. 
+Selamlar👋, bu proje kendi cv sitemin bulduğu bir projedir.
